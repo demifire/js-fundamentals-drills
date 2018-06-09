@@ -13,6 +13,13 @@ var doubleArray = function(arr) {
   return result
 }
 
+// function doubleArray(arr){ var result = [];
+//   for (var i = 0; i < arr.length; i++) {
+//     result.push(arr[i] * 2) 
+//   }
+//   return result
+// }
+
 /* #sumArrays
  *
  * Takes in two arrays of numbers and returns the sum of both arrays.
@@ -21,7 +28,16 @@ var doubleArray = function(arr) {
  * @param {Array}
  * @return {Bool}
  */
-var sumArrays;
+
+var sumArrays = function sumArrays(arr1, arr2){
+  var sum = 0;
+  var sum2 = 0;
+  for(var i = 0; i < arr1.length; i++){
+    sum += arr1[i]; 
+    sum2 += arr2[i];
+   }
+   return sum + sum2
+  }
 
 /* #stringCount
  *
@@ -30,7 +46,10 @@ var sumArrays;
  * @param {String}
  * @return {Number}
  */
-var stringCount;
+
+var stringCount = function stringCount(str){
+ return str.length; 
+};
 
 /* #arrayLength
  *
@@ -39,7 +58,10 @@ var stringCount;
  * @param {Array}
  * @return {Number}
  */
-var arrayLength;
+
+ var arrayLength = function arrayLength(arr){
+  return arr.length;
+ };
 
 /* #countAll
  *
@@ -48,7 +70,12 @@ var arrayLength;
  * @param {Array}
  * @return {Number}
  */
-var countAll;
+var countAll = function countAll(arr){
+  sum = 0;
+  for (var i = 0; i<arr.length; i++){
+  sum += arr[i];
+  }return sum;
+};
 
 /* #countStrings
  *
@@ -57,7 +84,13 @@ var countAll;
  * @param {Array}
  * @return {Array}
  */
-var countStrings;
+var countStrings = function countStrings(arr){
+  var lengthArr = [];
+  for (var i=0; i<arr.length; i++){
+  lengthArr.push(arr[i].length);
+    }
+    return lengthArr;
+  };
 
 /* #countAllStrings
  *
@@ -66,7 +99,14 @@ var countStrings;
  * @param {String}
  * @return {Number}
  */
-var countAllStrings;
+
+
+// var countAllStrings = function countAllStrings(arr){
+// var lengthArr = [];
+// for (var i=0; i<arr.length; i++){
+// lengthArr.push(arr[i].length);
+//   }
+// };
 
 /* #convertToArray
  *
@@ -370,43 +410,43 @@ var tupleConvertToObject;
 
 
 module.exports = {
-  doubleArray: null,
-  sumArrays: null, 
-  stringCount: null,
-  arrayLength: null,
-  countAll: null,
-  countStrings: null,
-  countAllStrings: null,
-  convertToArray: null,
-  objectSize: null,
-  createZeroFilledArray: null,
-  poppedArray: null,
-  splitString: null,
-  lengthOfLast: null,
-  sumBelowTen: null,
-  moreThanTenLetters: null,
-  multiplyAll: null,
-  sumAllPositive: null,
-  stringCountBelowThree: null,
-  countObjects: null,
-  getObjectKeys: null,
-  getObjectValues: null,
-  makeObject: null,
-  makeObjectReverse: null,
-  tupleToObject: null,
-  tupleToObjectReverse: null,
-  strToKeys: null,
-  getValues: null,
-  getKeys: null,
-  objectToArray: null,
-  arrayToObject: null,
-  arraysToObject: null,
-  objectsToTuples: null,
-  mapArrayValues: null,
-  mapStringCounts: null,
-  arrayToObjectNums: null,
-  stringToKeys: null,
-  charCountMap: null,
-  frequencyMap: null,
-  tupleConvertToObject: null
+  doubleArray: doubleArray,
+  sumArrays: sumArrays, 
+  stringCount: stringCount,
+  arrayLength: arrayLength,
+  countAll: countAll,
+  countStrings: countStrings,
+  countAllStrings: countAllStrings,
+  convertToArray: convertToArray,
+  objectSize: objectSize,
+  createZeroFilledArray: createZeroFilledArray,
+  poppedArray: poppedArray,
+  splitString: splitString,
+  lengthOfLast: lengthOfLast,
+  sumBelowTen: sumBelowTen,
+  moreThanTenLetters: moreThanTenLetters,
+  multiplyAll: multiplyAll,
+  sumAllPositive: sumAllPositive,
+  stringCountBelowThree: stringCountBelowThree,
+  countObjects: countObjects,
+  getObjectKeys: getObjectKeys,
+  getObjectValues: getObjectValues,
+  makeObject: makeObject,
+  makeObjectReverse: makeObjectReverse,
+  tupleToObject: tupleToObject,
+  tupleToObjectReverse: tupleToObjectReverse,
+  strToKeys: strToKeys,
+  getValues: getValues,
+  getKeys: getKeys,
+  objectToArray: objectToArray,
+  arrayToObject: arrayToObject,
+  arraysToObject: arraysToObject,
+  objectsToTuples: objectsToTuples,
+  mapArrayValues: mapArrayValues,
+  mapStringCounts: mapStringCounts,
+  arrayToObjectNums: arrayToObjectNums,
+  stringToKeys: stringToKeys,
+  charCountMap: charCountMap,
+  frequencyMap: frequencyMap,
+  tupleConvertToObject: tupleConvertToObject
 }
