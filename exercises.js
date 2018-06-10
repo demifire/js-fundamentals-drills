@@ -71,7 +71,7 @@ var stringCount = function stringCount(str){
  * @return {Number}
  */
 var countAll = function countAll(arr){
-  sum = 0;
+  var sum = 0;
   for (var i = 0; i<arr.length; i++){
   sum += arr[i];
   }return sum;
@@ -87,10 +87,10 @@ var countAll = function countAll(arr){
 var countStrings = function countStrings(arr){
   var lengthArr = [];
   for (var i=0; i<arr.length; i++){
-  lengthArr.push(arr[i].length);
-    }
-    return lengthArr;
-  };
+    lengthArr.push(arr[i].length);
+  }
+  return lengthArr;
+};
 
 /* #countAllStrings
  *
@@ -100,22 +100,32 @@ var countStrings = function countStrings(arr){
  * @return {Number}
  */
 
+var countAllStrings = function countAllStrings(arr){
+  var lengthArr = [];
+  var sum = 0;
+  for (var i=0; i<arr.length; i++){
+    lengthArr.push(arr[i].length);
+    sum += lengthArr[i];
+  }
+  return sum;
+};
 
-// var countAllStrings = function countAllStrings(arr){
-// var lengthArr = [];
-// for (var i=0; i<arr.length; i++){
-// lengthArr.push(arr[i].length);
-//   }
-// };
-
-/* #convertToArray
+/* #convertToArray 8
  *
  * Takes in an object and returns all the values of the object in an array.
  *
  * @param {Object}
  * @return {Array}
  */
-var convertToArray;
+
+var convertToArray = function convertToArray(obj) {
+  var newArr = [];
+  for (var i in obj) {
+    if( obj.hasOwnProperty(i) ) {
+      newArr.push(obj[i]);
+    } 
+  } return newArr;             
+};
 
 /* #objectSize
  *
@@ -124,7 +134,15 @@ var convertToArray;
  * @param {Object}
  * @return {Number}
  */
-var objectSize;
+
+var objectSize = function objectSize(obj){
+  var count = 0;
+  for (var i in obj) {
+    if( obj.hasOwnProperty(i) ) {
+    count++;
+    } 
+  } return count;
+};
 
 /* #createZeroFilledArray
  *
@@ -133,7 +151,13 @@ var objectSize;
  * @param {Number}
  * @return {Zero}
  */
-var createZeroFilledArray;
+var createZeroFilledArray = function createZeroFilledArray(num){
+  arr = [];
+  num.split('');
+  for (var i = 0; i<num.length; i++){
+    if (num[i] === 0){arr.push(0)}else{}
+  }
+};
 
 /* #poppedArray
  *
