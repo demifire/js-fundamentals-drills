@@ -178,7 +178,7 @@ var poppedArray = function poppedArray(arr){
     newArr.push(arr[i]);
   }
   return newArr;
-}
+};
 
 // Similar to the last problem, I just subtracted 1 from the for loop, and the last element in the aray does not get pushed
 
@@ -189,7 +189,11 @@ var poppedArray = function poppedArray(arr){
  * @param {String}
  * @return {Array}
  */
-var splitString;
+
+var splitString = function splitString(str){
+  var split = str.split('');
+  return split;
+};
 
 /* #lengthOfLast
  *
