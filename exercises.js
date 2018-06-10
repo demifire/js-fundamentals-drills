@@ -434,7 +434,14 @@ var getValues = function getValues(obj){
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+
+var getKeys = function getKeys(obj){
+  var arr = [];
+  for (var i in obj){
+    arr.push(i)
+  }
+  return arr;
+};
 
 /* #objectToArray
  *
