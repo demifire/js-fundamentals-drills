@@ -591,7 +591,14 @@ var stringToKeys = function stringToKeys(str){
  * @param {Array}
  * @return {Object}
  */
-var charCountMap;
+
+var charCountMap = function charCountMap(arr){
+  var obj = {};
+  for (var i=0;i<arr.length;i++){
+    obj[arr[i]] = arr[i].length;
+  }
+  return obj;  
+};
 
 /* #frequencyMap
  *
