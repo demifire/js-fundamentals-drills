@@ -195,6 +195,8 @@ var splitString = function splitString(str){
   return split;
 };
 
+// Apparently split already pushes into an array
+
 /* #lengthOfLast
  *
  * Takes in an array of strings and returns the length of the last string.
@@ -202,7 +204,10 @@ var splitString = function splitString(str){
  * @param {String}
  * @return {Number}
  */
-var lengthOfLast;
+
+var lengthOfLast = function lengthOfLast(arr){
+return arr.pop().length;
+};
 
 /* #sumBelowTen
  *
