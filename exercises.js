@@ -312,7 +312,14 @@ var countObjects = function countObjects(arr){
  * @param {Object}
  * @return {Array}
  */
-var getObjectKeys;
+
+var getObjectKeys = function getObjectKeys(obj){
+  arr = [];
+  for(var i in obj){
+    arr.push(i);
+  }
+  return arr;
+};
 
 /* #getObjectValues
  *
