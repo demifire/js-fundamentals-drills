@@ -358,9 +358,14 @@ var makeObject = function makeObject(key, value){
  *
  * @param {String}
  * @param {String}
- * @return {Bool}
+ * @return {Bool} << wat?
  */
-var makeObjectReverse;
+
+var makeObjectReverse = function makeObjectReverse(value, key){
+  var obj = {};
+  obj[key] = value;
+  return obj;
+};
 
 /* #tupleToObject
  *
