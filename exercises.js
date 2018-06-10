@@ -574,7 +574,14 @@ var arrayToObjectNums = function arrayToObjectNums(arr){
  * @param {String}
  * @return {Object}
  */
-var stringToKeys;
+
+var stringToKeys = function stringToKeys(str){
+  var obj = {};
+  for (var i=0;i<str.length;i++){
+    obj[str[i]] = true;
+  }
+  return obj;  
+};
 
 /* #charCountMap
  *
