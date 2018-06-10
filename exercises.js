@@ -328,7 +328,14 @@ var getObjectKeys = function getObjectKeys(obj){
  * @param {Object}
  * @return {Array}
  */
-var getObjectValues;
+
+var getObjectValues = function getObjectValues(obj){
+  arr = [];
+  for(var i in obj){
+    arr.push(obj[i]);
+  }
+  return arr;
+};
 
 /* #makeObject
  *
