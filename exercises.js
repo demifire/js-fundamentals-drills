@@ -451,7 +451,14 @@ var getKeys = function getKeys(obj){
  * @param {Object}
  * @return {Array}
  */
-var objectToArray;
+
+var objectToArray = function objectToArray(obj){
+  var arr = [];
+  for (var i in obj){
+    arr.push([i, obj[i]])
+  }
+  return arr;
+};
 
 /* #arrayToObject
  *
