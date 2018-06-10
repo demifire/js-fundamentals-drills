@@ -264,7 +264,14 @@ var multiplyAll = function multiplyAll(arr){
  * @param {String}
  * @return {Number}
  */
-var sumAllPositive;
+
+var sumAllPositive = function sumAllPositive(arr){
+  sum = 0;
+  for (var i=0;i<arr.length;i++){
+    if (Math.sign(arr[i]) === 1){sum += arr[i]}
+  }
+  return sum;
+};
 
 /* #stringCountBelowThree
  *
