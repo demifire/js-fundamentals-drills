@@ -607,7 +607,27 @@ var charCountMap = function charCountMap(arr){
  * @param {String}
  * @return {Bool}
  */
-var frequencyMap;
+
+var frequencyMap = function frequencyMap(arr){
+  var obj = {};
+  var newArr = [];
+  var frequency = [];
+  var previousNum;
+  arr.sort();
+  for (var i=0;i<arr.length;i++){
+    if(arr[i] !== previousNum){
+      newArr.push(arr[i])
+      frequency.push(1);
+    }else{
+      frequency[frequency.length-1]++;
+    };
+    previousNum = arr[i];
+  }
+  for (var i=0;i<frequency.length;i++){
+    obj[newArr[i]]=frequency[i];
+  }
+  return obj;
+};
 
 /* #tupleConvertToObject
  *
