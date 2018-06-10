@@ -162,6 +162,8 @@ var createZeroFilledArray = function createZeroFilledArray(num){
 return arr;
 };
 
+// I have to add +1 to the string.length because the array will contain all the numbers, however the length will still be one less because the array itself starts it's counting at 0
+
 /* #poppedArray
  *
  * Takes in an array of numbers and returns an array of all but the last element of the array.
@@ -169,7 +171,16 @@ return arr;
  * @param {Array}
  * @return {Array}
  */
-var poppedArray;
+
+var poppedArray = function poppedArray(arr){
+  newArr = [];
+  for (var i=0; i<arr.length-1; i++){
+    newArr.push(arr[i]);
+  }
+  return newArr;
+}
+
+// Similar to the last problem, I just subtracted 1 from the for loop, and the last element in the aray does not get pushed
 
 /* #splitString
  *
