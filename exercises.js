@@ -631,14 +631,22 @@ var frequencyMap = function frequencyMap(arr){
 
 /* #tupleConvertToObject
  *
- * takes in an array of tuples and and returns an object whos keys are 
+ * takes in an array of tuples and and returns an object whose keys are 
  * the first element of the tuples and values are second element of the tuples.
  *
  * @param {String}
  * @return {Bool}
  */
-var tupleConvertToObject;
 
+var tupleConvertToObject = function tupleConvertToObject(arr){
+  var obj = {};
+  for (var i=0;i<arr.length;i++){
+      obj[arr[i][0]] = arr[i][1];
+  };
+  return obj;
+  };
+
+  // I thought I had to do a loop within a loop but after console logging some stuff in JS bin.. Nope.
 
 module.exports = {
   doubleArray: doubleArray,
