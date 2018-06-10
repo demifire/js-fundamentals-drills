@@ -280,7 +280,14 @@ var sumAllPositive = function sumAllPositive(arr){
  * @param {Array}
  * @return {Number}
  */
-var stringCountBelowThree;
+
+var stringCountBelowThree = function stringCountBelowThree(arr){
+  var count = 0;
+  for (var i=0;i<arr.length;i++){
+    if (arr[i].length<=3){count++}
+  };
+  return count;
+};
 
 /* #countObjects
  *
