@@ -232,7 +232,14 @@ var sumBelowTen = function sumBelowTen(arr){
  * @param {String}
  * @return {Number}
  */
-var moreThanTenLetters;
+
+var moreThanTenLetters = function moreThanTenLetters(arr){
+  var count = 0;
+  for (var i=0;i<arr.length;i++){
+    if (arr[i].length>10){count++}
+  };
+  return count;
+};
 
 /* #multiplyAll
  *
