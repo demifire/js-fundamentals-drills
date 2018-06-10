@@ -216,7 +216,14 @@ return arr.pop().length;
  * @param {Array}
  * @return {Number}
  */
-var sumBelowTen;
+
+var sumBelowTen = function sumBelowTen(arr){
+  var sum = 0;
+  for (i=0;i<arr.length;i++){
+    if (arr[i]<10){sum += arr[i]}
+  }
+  return sum;
+};
 
 /* #moreThanTenLetters
  *
