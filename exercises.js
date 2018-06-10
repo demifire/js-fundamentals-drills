@@ -248,7 +248,14 @@ var moreThanTenLetters = function moreThanTenLetters(arr){
  * @param {Array}
  * @return {Number}
  */
-var multiplyAll;
+
+var multiplyAll = function multiplyAll(arr){
+  product = 1;
+  for (var i=0;i<arr.length;i++){
+    product *= arr[i];
+  }
+  return product;
+};
 
 /* #sumAllPositive
  *
