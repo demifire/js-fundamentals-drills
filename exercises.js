@@ -151,12 +151,15 @@ var objectSize = function objectSize(obj){
  * @param {Number}
  * @return {Zero}
  */
+
 var createZeroFilledArray = function createZeroFilledArray(num){
-  arr = [];
-  num.split('');
-  for (var i = 0; i<num.length; i++){
-    if (num[i] === 0){arr.push(0)}else{}
+  var arr = [];
+  var numberAsString = num.toString();
+  // console.log(numberAsString);
+  for (var i=0; i<numberAsString.length+1; i++){
+    arr.push(0);
   }
+return arr;
 };
 
 /* #poppedArray
