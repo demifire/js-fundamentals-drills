@@ -452,13 +452,16 @@ var getKeys = function getKeys(obj){
  * @return {Array}
  */
 
-var objectToArray = function objectToArray(obj){
-  var arr = [];
-  for (var i in obj){
-    arr.push([i, obj[i]])
-  }
-  return arr;
-};
+// var objectToArray = function objectToArray(obj){
+//   var arr = [];
+//   for (var i in obj){
+//     arr.push([i, obj[i]])
+//   }
+//   return arr;
+// };
+var objectToArray = function(obj) {
+    return Object.entries(obj);            
+  };
 
 /* #arrayToObject
  *
@@ -504,16 +507,32 @@ var arraysToObject = function arraysToObject(arr1, arr2){
  * @return {Array}
  */
 
-var objectsToTuples = function objectsToTuples(obj1, obj2){
-  var arr = [];
-  for (var i in obj1){
-    arr.push([i, obj1[i]]);
+// var objectsToTuples = function objectsToTuples(obj1, obj2){
+//   var arr = [];
+//   for (var i in obj1){
+//     arr.push([i, obj1[i]]);
+//   }
+//   for (var j in obj2){
+//     arr.push([j, obj2[j]])
+//   }
+//   return arr;
+// };
+
+
+//The Jamie method :o
+var objectsToTuples = function obectsToTuples(obj1, obj2){
+  var arr1 = Object.entries(obj1);
+  var arr2 = Object.entries(obj2);
+  var tupleArr = [];
+  for (var i=0;i<arr1.length;i++){
+    tupleArr.push(arr1[i]);
   }
-  for (var j in obj2){
-    arr.push([j, obj2[j]])
+  for (var i=0;i<arr2.length;i++){
+    tupleArr.push(arr2[i]);
   }
-  return arr;
+  return tupleArr;
 };
+
 
 /* #mapArrayValues
  *
@@ -628,6 +647,18 @@ var frequencyMap = function frequencyMap(arr){
   }
   return obj;
 };
+
+// var frequencyMap = function(arr) {
+//     var newObj = {};
+//     for (var i=0; i<arr.length; i++) {
+//       if (!!newObj[arr[i]]) {
+//         newObj[arr[i]] += 1
+//       } else {
+//         newObj[arr[i]] = 1;
+//       }
+//     }
+//     return newObj;
+//   };
 
 /* #tupleConvertToObject
  *
